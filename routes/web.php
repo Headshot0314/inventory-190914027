@@ -26,3 +26,7 @@ Route::get('/name/{name}', function ($name) {
 Route::get('/name/{name}/{nrp}', function ($name, $nrp) {
     return "Hello ". $name . $nrp;
 })->where("name", '[A-Za-z]+');
+
+Route::get('/person', 'PersonController@index');
+Route::get('/person/show/{param}', 'PersonController@show');
+Route::resource('/student', 'StudentController');
