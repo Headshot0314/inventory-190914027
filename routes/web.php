@@ -29,4 +29,7 @@ Route::get('/name/{name}/{nrp}', function ($name, $nrp) {
 
 Route::get('/person', 'PersonController@index');
 Route::get('/person/show/{param}', 'PersonController@show');
-Route::resource('/student', 'StudentController');
+
+
+
+Route::get('my-academic/{course}/{task}/{quiz}/{mid_term}/{final}','StudentController@myCourse');
