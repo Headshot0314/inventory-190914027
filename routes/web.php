@@ -29,7 +29,15 @@ Route::get('/name/{name}/{nrp}', function ($name, $nrp) {
 
 Route::get('/person', 'PersonController@index');
 Route::get('/person/show/{param}', 'PersonController@show');
+Route::get('/person/sendData', 'PersonController@sendData');
+
+Route::get('/student', 'StudentController@index');
+
+Route::get('/student/sendData', 'StudentController@sendData');
 
 
 
 Route::get('my-academic/{course}/{task}/{quiz}/{mid_term}/{final}','StudentController@myCourse');
+
+Route::get('/person/add', 'PersonController@add');
+Route::post('/person/addProcess', 'PersonController@addProcess');
